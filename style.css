@@ -1,73 +1,100 @@
+/* General Body */
 body {
   font-family: Arial, sans-serif;
   background: #f0f2f5;
+  margin: 0;
+  padding: 20px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding: 30px 10px;
-  margin: 0;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Container */
 .container {
   background: #fff;
   padding: 20px 25px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   box-sizing: border-box;
 }
 
+/* Headings */
 h2 {
   text-align: center;
-  margin-bottom: 20px;
   color: #333;
-  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+h3 {
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-table {
+/* Labels and Inputs */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+label i {
+  color: #4caf50;
+  margin-right: 5px;
+}
+input,
+select {
   width: 100%;
-  border-collapse: collapse;
-}
-
-td {
-  padding: 8px 5px;
-  vertical-align: middle;
-}
-
-td i {
-  margin-right: 8px;
-  color: #4CAF50;
-}
-
-input, select {
-  width: 100%;
-  padding: 7px;
+  padding: 8px;
+  margin-top: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
+/* Button */
 button {
   width: 100%;
   padding: 12px;
-  margin-top: 15px;
-  background: #4CAF50;
+  margin-top: 20px;
+  background: #4caf50;
   color: #fff;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   font-size: 16px;
+  cursor: pointer;
 }
-
 button i {
   margin-right: 5px;
 }
-
 button:hover {
   background: #45a049;
 }
 
+/* Diet Summary Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background: #f9f9f9;
+  color: #333;
+}
+td i {
+  color: #4caf50;
+  margin-right: 5px;
+}
+
+/* Result Section */
 #result {
   margin-top: 20px;
   text-align: left;
@@ -76,38 +103,63 @@ button:hover {
   padding-top: 10px;
 }
 
-#result table {
-  width: 100%;
-  margin-top: 10px;
-  border-collapse: collapse;
+/* Footer */
+footer {
+  width: 40%;
+  margin-top: 30px;
+  text-align: center;
+  padding: 15px 10px;
+  background: #4caf50;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
-#result td {
-  padding: 5px;
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
-/* Responsive Adjustments */
+.footer-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+footer i {
+  margin-right: 5px;
+}
+
+/* Responsive Styles */
 @media (max-width: 600px) {
   .container {
-    padding: 15px 15px;
+    padding: 15px 20px;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 22px;
   }
 
-  td {
-    display: block;
-    width: 100%;
-    padding: 5px 0;
-  }
-
-  td input, td select {
-    margin-top: 5px;
+  h3 {
+    font-size: 16px;
   }
 
   button {
     font-size: 14px;
-    padding: 10px;
+  }
+
+  .footer-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  footer {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px 5px;
   }
 }

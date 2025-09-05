@@ -1,152 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comprehensive Diet & Health Form</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-  <div class="container">
-    <h2>Diet & Health Form</h2>
-    <form id="dietForm">
-      <table>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comprehensive Diet & Health Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Diet & Health Form</h2>
+      <form id="dietForm">
         <!-- Personal Info -->
-        <tr>
-          <td><i class="fa fa-user"></i> Name:</td>
-          <td><input type="text" id="name" name="name" placeholder="Your Name" required></td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-calendar"></i> Age:</td>
-          <td><input type="number" id="age" name="age" placeholder="Your Age" required></td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-venus-mars"></i> Gender:</td>
-          <td>
-            <select id="gender" name="gender" required>
-              <option value="">Select</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
-            </select>
-          </td>
-        </tr>
+        <h3>Personal Information</h3>
+        <label for="name"><i class="fa fa-user"></i> Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="age"><i class="fa fa-calendar"></i> Age:</label>
+        <input type="number" id="age" name="age" required />
+
+        <label for="gender"><i class="fa fa-venus-mars"></i> Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="activity"><i class="fa fa-running"></i> Activity Level:</label>
+        <select id="activity" name="activity" required>
+          <option value="">Select</option>
+          <option value="Sedentary">Sedentary</option>
+          <option value="Lightly active">Lightly active</option>
+          <option value="Moderately active">Moderately active</option>
+          <option value="Very active">Very active</option>
+        </select>
 
         <!-- Physical Info -->
-        <tr>
-          <td><i class="fa fa-weight"></i> Weight (kg):</td>
-          <td><input type="number" id="weight" name="weight" placeholder="Your Weight" required></td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-arrows-alt-v"></i> Height (cm):</td>
-          <td><input type="number" id="height" name="height" placeholder="Your Height" required></td>
-        </tr>
+        <h3>Physical Info</h3>
+        <label for="weight"><i class="fa fa-weight"></i> Weight (kg):</label>
+        <input type="number" id="weight" name="weight" required />
+
+        <label for="height"><i class="fa fa-arrows-alt-v"></i> Height (cm):</label>
+        <input type="number" id="height" name="height" required />
 
         <!-- Diet Info -->
-        <tr>
-          <td><i class="fa fa-leaf"></i> Diet Preference:</td>
-          <td>
-            <select id="diet" name="diet" required>
-              <option value="">Select</option>
-              <option value="Vegetarian">Vegetarian</option>
-              <option value="Non-Vegetarian">Non-Vegetarian</option>
-              <option value="Vegan">Vegan</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-utensils"></i> Meals per day:</td>
-          <td><input type="number" id="meals" name="meals" placeholder="E.g., 3" min="1" max="10" required></td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-tint"></i> Water intake (liters):</td>
-          <td><input type="number" step="0.1" id="water" name="water" placeholder="E.g., 2.5" required></td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-bolt"></i> Exercise frequency:</td>
-          <td>
-            <select id="exercise" name="exercise" required>
-              <option value="">Select</option>
-              <option value="None">None</option>
-              <option value="1-2 days/week">1-2 days/week</option>
-              <option value="3-5 days/week">3-5 days/week</option>
-              <option value="Daily">Daily</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-bullseye"></i> Goal:</td>
-          <td>
-            <select id="goal" name="goal" required>
-              <option value="">Select</option>
-              <option value="Weight Loss">Weight Loss</option>
-              <option value="Weight Gain">Weight Gain</option>
-              <option value="Maintenance">Maintenance</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-globe"></i> Preferred cuisine:</td>
-          <td>
-            <select id="cuisine" name="cuisine" required>
-              <option value="">Select</option>
-              <option value="Indian">Indian</option>
-              <option value="Continental">Continental</option>
-              <option value="Chinese">Chinese</option>
-              <option value="Italian">Italian</option>
-              <option value="Other">Other</option>
-            </select>
-          </td>
-        </tr>
+        <h3>Diet Info</h3>
+        <label for="diet"><i class="fa fa-leaf"></i> Diet Preference:</label>
+        <select id="diet" name="diet" required>
+          <option value="">Select</option>
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Non-Vegetarian">Non-Vegetarian</option>
+          <option value="Vegan">Vegan</option>
+        </select>
+
+        <label for="meals"><i class="fa fa-utensils"></i> Meals per day:</label>
+        <input type="number" id="meals" name="meals" min="1" max="10" required />
+
+        <label for="water"><i class="fa fa-tint"></i> Water intake (liters):</label>
+        <input type="number" id="water" name="water" step="0.1" required />
+
+        <label for="exercise"><i class="fa fa-bolt"></i> Exercise frequency:</label>
+        <select id="exercise" name="exercise" required>
+          <option value="">Select</option>
+          <option value="None">None</option>
+          <option value="1-2 days/week">1-2 days/week</option>
+          <option value="3-5 days/week">3-5 days/week</option>
+          <option value="Daily">Daily</option>
+        </select>
+
+        <label for="goal"><i class="fa fa-bullseye"></i> Goal:</label>
+        <select id="goal" name="goal" required>
+          <option value="">Select</option>
+          <option value="Weight Loss">Weight Loss</option>
+          <option value="Weight Gain">Weight Gain</option>
+          <option value="Maintenance">Maintenance</option>
+        </select>
+
+        <label for="cuisine"><i class="fa fa-globe"></i> Preferred cuisine:</label>
+        <select id="cuisine" name="cuisine" required>
+          <option value="">Select</option>
+          <option value="Indian">Indian</option>
+          <option value="Continental">Continental</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Italian">Italian</option>
+          <option value="Other">Other</option>
+        </select>
 
         <!-- Health Info -->
-        <tr>
-          <td><i class="fa fa-exclamation-triangle"></i> Allergies:</td>
-          <td><input type="text" id="allergies" name="allergies" placeholder="E.g., Peanuts, Lactose"></td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-notes-medical"></i> Previous Diseases:</td>
-          <td><input type="text" id="diseases" name="diseases" placeholder="E.g., Diabetes, Hypertension"></td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-cookie-bite"></i> Snacking habits:</td>
-          <td>
-            <select id="snacks" name="snacks" required>
-              <option value="">Select</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-pills"></i> Supplement intake:</td>
-          <td>
-            <select id="supplements" name="supplements" required>
-              <option value="">Select</option>
-              <option value="None">None</option>
-              <option value="Vitamins">Vitamins</option>
-              <option value="Protein">Protein</option>
-              <option value="Other">Other</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-bed"></i> Sleep duration (hours):</td>
-          <td><input type="number" step="0.5" id="sleep" name="sleep" placeholder="E.g., 7.5" required></td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-ban"></i> Food dislikes:</td>
-          <td><input type="text" id="dislikes" name="dislikes" placeholder="Optional"></td>
-        </tr>
-      </table>
+        <h3>Health Info</h3>
+        <label for="allergies"><i class="fa fa-exclamation-triangle"></i> Allergies:</label>
+        <input type="text" id="allergies" name="allergies" placeholder="E.g., Peanuts, Lactose" />
 
-      <button type="submit"><i class="fa fa-paper-plane"></i> Submit</button>
-    </form>
+        <label for="diseases"><i class="fa fa-notes-medical"></i> Previous Diseases:</label>
+        <input type="text" id="diseases" name="diseases" placeholder="E.g., Diabetes, Hypertension" />
 
-    <div id="result"></div>
-  </div>
+        <label for="snacks"><i class="fa fa-cookie-bite"></i> Snacking habits:</label>
+        <select id="snacks" name="snacks" required>
+          <option value="">Select</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
 
-  <script src="script.js"></script>
-</body>
+        <label for="supplements"><i class="fa fa-pills"></i> Supplement intake:</label>
+        <select id="supplements" name="supplements" required>
+          <option value="">Select</option>
+          <option value="None">None</option>
+          <option value="Vitamins">Vitamins</option>
+          <option value="Protein">Protein</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="sleep"><i class="fa fa-bed"></i> Sleep duration (hours):</label>
+        <input type="number" id="sleep" name="sleep" step="0.5" required />
+
+        <label for="dislikes"><i class="fa fa-ban"></i> Food dislikes:</label>
+        <input type="text" id="dislikes" name="dislikes" placeholder="Optional" />
+
+        <!-- Calorie Intake -->
+        <h3>Calorie Intake</h3>
+        <label for="daily-calories"><i class="fa fa-fire"></i> Daily Calorie Intake:</label>
+        <input type="number" id="daily-calories" name="daily-calories" required />
+        <label for="calories-consumed"><i class="fa fa-pizza-slice"></i> Calories Consumed:</label>
+        <input type="number" id="calories-consumed" name="calories-consumed" required />
+        <p id="goal-completion">Diet Goal Completion: 0%</p>
+
+        <!-- Weight Tracking -->
+        <h3>Weight Tracking</h3>
+        <label for="current-weight"><i class="fa fa-weight"></i> Current Weight (kg):</label>
+        <input type="number" id="current-weight" name="current-weight" required />
+        <label for="target-weight"><i class="fa fa-bullseye"></i> Target Weight (kg):</label>
+        <input type="number" id="target-weight" name="target-weight" required />
+
+        <!-- Diet Summary Table -->
+        <h3>Diet Summary</h3>
+        <table id="diet-summary">
+          <thead>
+            <tr>
+              <th>Meal</th>
+              <th>Food</th>
+              <th>Calories</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dynamic rows will appear here -->
+          </tbody>
+        </table>
+
+        <button type="submit"><i class="fa fa-paper-plane"></i> Submit</button>
+      </form>
+
+      <div id="result"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <img src="https://res.cloudinary.com/dwroczrua/image/upload/v1754580374/Picsart_25-08-07_20-47-46-125_snfulk.jpg" alt="Anand Emmanuel" class="footer-img" />
+        <p>
+          <i class="fa fa-user"></i> Anand Emmanuel Raju Billa |
+          <i class="fa fa-envelope"></i> anandemmanel.billa@gmail.com |
+          <i class="fa fa-phone"></i> +91 7416955842
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
